@@ -50,6 +50,7 @@ GET /v1/exchange/info
 GET /v1/quote/ticker/24hr
 ```
 请求参数：
+
 | Name | Type | Required | Default | Description  |
 | ---- | ---- | -------- | ------- | ------------ |
 | pair | string | true | | |
@@ -60,11 +61,11 @@ GET /v1/quote/ticker/24hr
     "code": 0,
     "data": {
         "pair": "BTC_USDT",
-        "open": null, // 开盘价
-        "close": null, // 收盘价
-        "high": null, // 最高价
-        "low": null, // 最低价
-        "amount": null // 交易量
+        "open": null, //开盘价
+        "close": null, //收盘价
+        "high": null, //最高价
+        "low": null, //最低价
+        "amount": null //交易量
     }
 }
 ```
@@ -73,6 +74,7 @@ GET /v1/quote/ticker/24hr
 GET /v1/quote/ticker/price
 ```
 请求参数：
+
 | Name | Type | Required | Default | Description  |
 | ---- | ---- | -------- | ------- | ------------ |
 | pair | string | true | | |
@@ -92,6 +94,7 @@ GET /v1/quote/ticker/price
 GET /v1/quote/depth
 ```
 请求参数：
+
 | Name | Type | Required | Default | Description  |
 | ---- | ---- | -------- | ------- | ------------ |
 | pair | string | true | | |
