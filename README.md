@@ -54,18 +54,19 @@ GET /v1/quote/ticker/24hr
 | Name | Type | Required | Default | Description  |
 | ---- | ---- | -------- | ------- | ------------ |
 | pair | string | true | | |
+
 返回结果：
-```json
+```javascript
 {
     "msg": "success",
     "code": 0,
     "data": {
         "pair": "BTC_USDT",
-        "open": null, //开盘价
-        "close": null, //收盘价
-        "high": null, //最高价
-        "low": null, //最低价
-        "amount": null //交易量
+        "open": null, // 开盘价
+        "close": null, // 收盘价
+        "high": null, // 最高价
+        "low": null, // 最低价
+        "amount": null // 交易量
     }
 }
 ```
@@ -78,8 +79,9 @@ GET /v1/quote/ticker/price
 | Name | Type | Required | Default | Description  |
 | ---- | ---- | -------- | ------- | ------------ |
 | pair | string | true | | |
+
 返回结果：
-```json
+```javascript
 {
     "msg": "success",
     "code": 0,
@@ -100,8 +102,9 @@ GET /v1/quote/depth
 | pair | string | true | | |
 | size | integer | false | 50 | |
 | precision | string | false | | |
+
 返回结果：
-```json
+```javascript
 {
     "msg": "success",
     "code": 0,
