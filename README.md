@@ -62,11 +62,11 @@ GET /v1/quote/ticker/24hr
     "code": 0,
     "data": {
         "pair": "BTC_USDT",
-        "open": null, // 开盘价
-        "close": null, // 收盘价
-        "high": null, // 最高价
-        "low": null, // 最低价
-        "amount": null // 交易量
+        "open": null, //开盘价
+        "close": null, //收盘价
+        "high": null, //最高价
+        "low": null, //最低价
+        "amount": null //交易量
     }
 }
 ```
@@ -112,5 +112,61 @@ GET /v1/quote/depth
         "asks": [],
         "bids": []
     }
+}
+```
+成交记录
+```
+GET /v1/quote/deals
+```
+请求参数：
+
+| Name | Type | Required | Default | Description  |
+| ---- | ---- | -------- | ------- | ------------ |
+| pair | string | true | | |
+| size | integer | false | 20 | |
+
+返回结果：
+```javascript
+{
+    "msg": "success",
+    "code": 0,
+    "data": {
+        "pair": [],
+        "amount": [], //交易量
+        "price": [], //成交价
+        "direction": [], //交易方向，B为买单，S为卖单
+        "time": [], //交易时间
+    }
+}
+```
+K线数据
+```
+GET /v1/quote/kline
+```
+请求参数：
+
+| Name | Type | Required | Default | Description  |
+| ---- | ---- | -------- | ------- | ------------ |
+| pair | string | true | | |
+| period | string | false | 1m | [1m, 5m, 15m, 30m, 1h, 4h, 6h, 12h, 1d, 1w]|
+| size | integer | false | 500 | max:1000|
+| from | long | false | | |
+| to | long | false | | |
+
+返回结果：
+```javascript
+{
+    "msg": "success",
+    "code": 0,
+    "data": [
+        {
+            "time": 1567159860000,
+            "close": 9400.0, //收盘价
+            "open": 9400.0, //开盘价
+            "high": 9400.0, //最高价
+            "low": 9400.0, //最低价
+            "amount": 1.0 //交易量
+        }
+    ]
 }
 ```
